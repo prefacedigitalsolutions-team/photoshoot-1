@@ -1,0 +1,462 @@
+
+/* ABOUT + IMAGE SLIDER SECTION */
+
+.about-slider-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 80px 40px;
+    box-sizing: border-box;
+}
+
+/* LEFT 45% */
+.about-left {
+    width: 45%;
+}
+
+.about-left h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.about-left p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555;
+    max-width: 90%;
+}
+
+/* GAP 5% */
+.about-gap {
+    width: 5%;
+}
+
+/* RIGHT 50% */
+.about-right {
+    width: 50%;
+    position: relative;
+}
+
+/* Image Slider */
+.image-slider {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-slider img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.image-slider img.active {
+    opacity: 1;
+}
+/* ============================= */
+/* TABLET (≤ 992px) */
+/* ============================= */
+@media (max-width: 992px) {
+    .about-left h2 {
+        font-size: 42px;
+    }
+
+    /* 🔥 Tablet image height increased */
+    .image-slider {
+        height: 70vh;   /* pehle 60vh tha */
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .about-slider-section {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .about-right {
+        width: 100%;
+        order: 1;
+    }
+
+    .about-left {
+        width: 100%;
+        order: 2;
+        margin-top: 30px;
+    }
+
+    .about-gap {
+        display: none;
+    }
+
+    .about-left h2 {
+        font-size: 34px;
+        text-align: left;
+    }
+
+    .about-left p {
+        max-width: 100%;
+        font-size: 15px;
+    }
+
+    .image-slider {
+        height: 520px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .about-left h2 {
+        font-size: 28px;
+    }
+
+    .about-left p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .image-slider {
+        height: 560px; 
+    }
+}
+
+/* Banar section End */
+
+
+
+
+/* Why us section Start */
+
+.whyus-heading {
+  position: relative;
+  text-align: center;
+  padding-bottom: 0;
+  margin-bottom: 30px; /* optional section spacing */
+}
+
+/* BIG UNDERLINE – chipka hua, ab flow me */
+.whyus-heading::after {
+  content: "";
+  display: block;         /* block element, flow me */
+  width: 120px;           /* badi underline */
+  height: 4px;
+  background-color: #000;
+  margin: 0 auto;         /* center align */
+  margin-bottom: 20px;    /* gap between underline and heading */
+}
+
+/* TOP LINE – unchanged */
+.whyus-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #b4a9a9;
+}
+
+/* Heading text – now naturally flow below underline */
+.whyus-heading h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin: 0; /* margin-top already via ::after margin-bottom */
+}
+
+
+/* CONTENT GRID */
+.whyus-content {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 1fr;
+  align-items: center;
+  gap: 50px;
+   padding: 0 30px; 
+}
+
+/* LEFT */
+.whyus-left p {
+  font-size: 19px;
+  line-height: 1.7;
+  color: #424242;
+
+}
+
+/* IMAGE */
+.whyus-image img {
+  width: 100%;
+  border-radius: 2px;
+}
+
+/* RIGHT */
+.whyus-right h4 {
+  font-size: 21px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.reasons-list {
+  padding-left: 18px;
+}
+
+.reasons-list li {
+  margin-bottom: 8px;
+  font-size: 15px;
+   letter-spacing: 1px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+  .whyus-content {
+    grid-template-columns: 1fr; /* single column */
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .whyus-left p {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .whyus-right h4 {
+    font-size: 18px;
+  }
+
+  .reasons-list li {
+    font-size: 14px;
+  }
+
+  .whyus-heading h2 {
+    font-size: 36px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .whyus-section {
+    padding: 0px 10px;
+  }
+
+  .whyus-heading h2 {
+    font-size: 28px;
+  }
+
+  .whyus-left p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .whyus-image img {
+    width: 100%;
+    border-radius: 0; /* mobile pe better full width */
+  }
+
+  .whyus-right h4 {
+    font-size: 16px;
+  }
+
+  .reasons-list li {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 480px) {
+
+  .whyus-heading h2 {
+    font-size: 24px;
+  }
+ .whyus-heading::after {
+    width: 60px; 
+    height: 1px;
+  }
+  .whyus-left p {
+    font-size: 14px;
+  }
+
+  .whyus-right h4 {
+    font-size: 15px;
+  }
+
+  .reasons-list li {
+    font-size: 12px; /* 12 point */
+  }
+}
+
+
+
+/* Why us section End*/
+
+
+
+/* Static image section start */
+
+.static-bg-section {
+  width: 100%;
+  min-height: 520px;
+  position: relative;
+  background-image: url("../../img-1/Static-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Optional overlay for fade effect */
+.static-bg-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3); 
+  z-index: 1;
+}
+
+/* Mobile and Tablet Fixes */
+@media (max-width: 1024px) {
+  .static-bg-section {
+    min-height: 400px; 
+    background-attachment: scroll; 
+  }
+}
+
+@media (max-width: 768px) {
+  .static-bg-section {
+    min-height: 300px; 
+    background-position: top center; 
+  }
+
+  .static-bg-section .overlay {
+    background: rgba(0,0,0,0.4); 
+  }
+}
+
+@media (max-width: 480px) {
+  .static-bg-section {
+    min-height: 250px; 
+  }
+
+  .static-bg-section .overlay {
+    background: rgba(0,0,0,0.45); 
+  }
+}
+
+/* Static image section End */
+
+.gallery-section {
+  padding: 60px 40px;
+  background: #f9f9f9;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.gallery-subtitle {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Grid rows */
+.gallery-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gallery-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+}
+
+
+.gallery-row:first-child .gallery-item img {
+  height: 300px; 
+}
+
+
+.gallery-row:last-child .gallery-item img {
+  height: 200px; 
+}
+
+.gallery-item img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0px;
+}
+
+.gallery-caption {
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+  margin-top: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery-title {
+    font-size: 28px;
+  }
+
+  .gallery-subtitle {
+    font-size: 16px;
+  }
+
+  .gallery-row {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .gallery-row:first-child .gallery-item img {
+    height: 120px; /* uper row chhoti */
+  }
+
+  .gallery-row:last-child .gallery-item img {
+    height: 220px; /* niche row thodi kam lekin still zyada */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-title {
+    font-size: 24px;
+  }
+
+  .gallery-subtitle {
+    font-size: 14px;
+  }
+
+  .gallery-row {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .gallery-row:first-child .gallery-item img {
+    height: 140px; /* mobile uper row */
+  }
+
+  .gallery-row:last-child .gallery-item img {
+    height: 100px; /* mobile niche row */
+  }
+}
