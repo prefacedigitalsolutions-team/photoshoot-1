@@ -130,62 +130,6 @@ window.addEventListener("load", () => {
 });
 
 
-// Gsap section start
-gsap.utils.toArray(".gsap-section").forEach(section => {
-
-  section.querySelectorAll(".gsap-heading").forEach(el => {
-    gsap.from(el, {
-      scrollTrigger: {
-        trigger: section,
-        start: "top 80%"
-      },
-      y: 50,
-      opacity: 0,
-      duration: 1
-    });
-  });
-
-  section.querySelectorAll(".gsap-left").forEach(el => {
-    gsap.from(el, {
-      scrollTrigger: {
-        trigger: section,
-        start: "top 75%"
-      },
-      x: -80,
-      opacity: 0,
-      duration: 1
-    });
-  });
-
-  section.querySelectorAll(".gsap-image").forEach(el => {
-    gsap.from(el, {
-      scrollTrigger: {
-        trigger: section,
-        start: "top 75%"
-      },
-      scale: 0.85,
-      opacity: 0,
-      duration: 1
-    });
-  });
-
-  section.querySelectorAll(".gsap-right").forEach(el => {
-    gsap.from(el, {
-      scrollTrigger: {
-        trigger: section,
-        start: "top 75%"
-      },
-      x: 80,
-      opacity: 0,
-      duration: 1
-    });
-  });
-
-});
-
-// gsap section End
-
-
 
 
 
@@ -243,7 +187,6 @@ controls.forEach((control, index) => {
 });
 
 
-
 /* main heading animation */
 
 document.querySelector(".controls").addEventListener("mouseleave", () => {
@@ -275,30 +218,96 @@ window.addEventListener("load", typeEffect);
 
 
 
+// gsap section start All page
 
+window.addEventListener("DOMContentLoaded", () => {
 
+  gsap.registerPlugin(ScrollTrigger);
 
+     // row
+  document.querySelectorAll('.row').forEach((row) => {
 
-// Plugin ko register karein
-gsap.registerPlugin(ScrollTrigger);
-
-// Har ek row ke liye alag se animation trigger karenge taaki scroll smooth lage
-const rows = document.querySelectorAll('.row');
-
-rows.forEach((row) => {
-    // Row ke andar ki images ko select karein
     const images = row.querySelectorAll('.gsap-img');
+    if (!images.length) return;
 
     gsap.to(images, {
-        scrollTrigger: {
-            trigger: row,        // Jab ye wali row screen par aaye
-            start: "top 85%",    // Jab row ka top 85% window height par ho
-            toggleActions: "play none none none", // Sirf ek baar play ho
-        },
-        opacity: 1,              // 0 se 1 ho jayega
-        y: 0,                    // 50px niche se apni original jagah aayega
-        duration: 1.2,           // Animation ki speed
-        stagger: 0.2,            // Har image ke beech 0.2s ka gap (Premium look)
-        ease: "power4.out"       // Smooth ending animation
+      scrollTrigger: {
+        trigger: row,
+        start: "top 85%",
+        toggleActions: "play none none none",
+      },
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      stagger: 0.2,
+      ease: "power4.out"
     });
+
+  });
+
+
+
+    //  SECTION WISE ANIMATION
+
+  gsap.utils.toArray(".gsap-section").forEach(section => {
+
+    const heading = section.querySelectorAll(".gsap-heading");
+    const left    = section.querySelectorAll(".gsap-left");
+    const image   = section.querySelectorAll(".gsap-image");
+    const right   = section.querySelectorAll(".gsap-right");
+
+    if (heading.length) {
+      gsap.from(heading, {
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%"
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1
+      });
+    }
+
+    if (left.length) {
+      gsap.from(left, {
+        scrollTrigger: {
+          trigger: section,
+          start: "top 75%"
+        },
+        x: -80,
+        opacity: 0,
+        duration: 1
+      });
+    }
+
+    if (image.length) {
+      gsap.from(image, {
+        scrollTrigger: {
+          trigger: section,
+          start: "top 75%"
+        },
+        scale: 0.85,
+        opacity: 0,
+        duration: 1
+      });
+    }
+
+    if (right.length) {
+      gsap.from(right, {
+        scrollTrigger: {
+          trigger: section,
+          start: "top 75%"
+        },
+        x: 80,
+        opacity: 0,
+        duration: 1
+      });
+    }
+
+  });
+
 });
+
+
+// gsap section End
+
