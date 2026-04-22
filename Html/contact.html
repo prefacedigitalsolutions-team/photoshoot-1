@@ -127,22 +127,30 @@
 
   <!-- banar section start -->
 
-<section class="split-section">
-  
-  <!-- Left Side (Image) -->
-  <div class="right-image">
-    <img src="../img-1/about/About-banar-1.jpg" alt="image">
-  </div>
-
-  <!-- Right Side (Text) -->
-  <div class="left-content">
-    <div class="text-box">
-      <h1></h1>
-      <p>Where Every Shot Tells a Story, Every Moment Becomes a Lasting Memory, and Every Frame Captures the True Essence of Life in Its Most Beautiful Form</p>
-    </div>
-  </div>
-
+<!-- Contact Banner Start -->
+<section class="contact-banner">
+  <h1>Contact Us</h1>
 </section>
+
+<style>
+.contact-banner {
+  width: 100%;
+  height:100vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('https://images.unsplash.com/photo-1521791136064-7986c2920216') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-banner h1 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+</style>
+<!-- Contact Banner End -->
 <!-- Banar section End-->
 
 
@@ -167,21 +175,102 @@
 
  
 
-
-
-<!-- static section start-->
-
-<section class="photo-bg">
-  <div class="overlay">
-    <div class="content">
-      <p>
-        
-      </p>
+<!-- Contact Section Start -->
+<section class="contact-section">
+  <div class="container">
+    
+    <!-- Left Side Form -->
+    <div class="contact-form">
+      <h2>Get In Touch</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="tel" placeholder="Mobile Number" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </div>
+
+    <!-- Right Side Company Info -->
+    <div class="contact-info">
+      <h2>Preface Digital Solutions</h2>
+      <p><strong>Mobile:</strong> +91 9876543210</p>
+      <p><strong>Email 1:</strong> info@example.com</p>
+      <p><strong>Email 2:</strong> support@example.com</p>
+      <p><strong>Service:</strong> Web Designer</p>
+    </div>
+
   </div>
 </section>
 
-<!-- static section start-->
+<style>
+.contact-section {
+  padding: 50px 20px;
+  background: #f5f5f5;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Form Side */
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 12px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #0056b3;
+}
+
+/* Info Side */
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.contact-info h2 {
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+</style>
+<!-- Contact Section End -->
+
+
+
 
 <!-- Footer section start -->
 <footer class="site-footer">
