@@ -1,0 +1,57 @@
+   
+.pds-service-banner {
+    width: 100%;
+    height: 98vh;
+    position: relative;
+    overflow: hidden;
+    background: url('../../img-1/service/service-banar-1.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TITLE */
+.pds-banner-title {
+    color: #fff;
+    font-size: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+/* COLORFUL SHINE EFFECT */
+.pds-service-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 0, 150, 0) 0%,
+        rgba(0, 200, 255, 0.25) 30%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 200, 0, 0.25) 70%,
+        rgba(255, 0, 150, 0) 100%
+    );
+    transform: skewX(-25deg);
+    animation: pds-shine 4s infinite;
+    z-index: 1;
+}
+
+@keyframes pds-shine {
+    0% {
+        left: -80%;
+    }
+    100% {
+        left: 130%;
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .pds-banner-title {
+        font-size: 32px;
+    }
+}

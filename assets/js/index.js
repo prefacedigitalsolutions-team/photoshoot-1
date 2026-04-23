@@ -154,7 +154,7 @@ controls.forEach(c => {
 });
 
 /* HOVER LOGIC */
-controls.forEach((control, index) => {
+ controls.forEach((control, index) => {
 
   control.addEventListener("mouseenter", () => {
 
@@ -184,16 +184,16 @@ controls.forEach((control, index) => {
       [current, next] = [next, current];
     }
   });
-});
+ });
 
 
-/* main heading animation */
+ /* main heading animation */
 
-document.querySelector(".controls").addEventListener("mouseleave", () => {
+ document.querySelector(".controls").addEventListener("mouseleave", () => {
   mask.style.width = "0px";
   strips.forEach(s => s.style.bottom = "-100%");
   controls.forEach(c => c.classList.remove("active"));
-});
+ });
 
 // banner section end
 const typingEl = document.getElementById("typing-text");
@@ -202,25 +202,25 @@ const text = typingEl.textContent;
 let i = 0;
 typingEl.textContent = "";         
 
-function typeEffect(){
+ function typeEffect(){
   if(i < text.length){
     typingEl.textContent += text.charAt(i);
     i++;
     setTimeout(typeEffect, 60);
   }
-}
+ }
 
-window.addEventListener("load", typeEffect);
-
-
-// banar section End
+ window.addEventListener("load", typeEffect);
 
 
+ // banar section End
 
 
-// gsap section start All page
 
-window.addEventListener("DOMContentLoaded", () => {
+
+ // gsap section start All page
+
+ window.addEventListener("DOMContentLoaded", () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -249,7 +249,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     //  SECTION WISE ANIMATION
 
-  gsap.utils.toArray(".gsap-section").forEach(section => {
+   gsap.utils.toArray(".gsap-section").forEach(section => {
 
     const heading = section.querySelectorAll(".gsap-heading");
     const left    = section.querySelectorAll(".gsap-left");
@@ -310,5 +310,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 // gsap section End
+
+
+
 
 

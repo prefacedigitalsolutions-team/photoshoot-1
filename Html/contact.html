@@ -17,7 +17,7 @@
 
     <link href="../assets/css/All.css" rel="stylesheet" />
     <link href="../assets/css/index.css" rel="stylesheet">
-    <link href="../assets/css/About.css" rel="stylesheet">
+    <link href="../assets/css/contact.css" rel="stylesheet">
 
 
      <!-- Google Font -->
@@ -94,7 +94,7 @@
           </li>
 
           <li class="fancynav-item">
-            <a class="fancynav-link" href="#"><span class="fancynav-link-content">service</span>
+            <a class="fancynav-link" href="service.html"><span class="fancynav-link-content">service</span>
             </a>
           </li>
 
@@ -116,41 +116,12 @@
 <!-- nav bar end-->
 
 
+<!-- Banar section start-->
 
-
-<!-- logo section start-->
- <div class="site-logo">
-    <img src="../img-1/logo.png" alt="Logo">
-  </div>
-
-
-
-  <!-- banar section start -->
-
-<!-- Contact Banner Start -->
 <section class="contact-banner">
-  <h1>Contact Us</h1>
+    <h1>Contact Us</h1>
 </section>
 
-<style>
-.contact-banner {
-  width: 100%;
-  height:100vh;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-              url('https://images.unsplash.com/photo-1521791136064-7986c2920216') center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact-banner h1 {
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  font-family: Arial, sans-serif;
-}
-</style>
-<!-- Contact Banner End -->
 <!-- Banar section End-->
 
 
@@ -163,9 +134,7 @@
 <section class="intro-section">
   <div class="intro-container">
     <p>
-      Welcome to our website! We specialize in creating innovative digital solutions, 
-      designing visually appealing websites, and delivering impactful marketing materials.
-      Our team is dedicated to bringing your ideas to life with creativity and precision.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br> Id maiores ipsa autem. Et, ipsum corrupti.
     </p>
   </div>
 </section>
@@ -175,113 +144,89 @@
 
  
 
-<!-- Contact Section Start -->
-<section class="contact-section">
-  <div class="container">
-    
-    <!-- Left Side Form -->
-    <div class="contact-form">
-      <h2>Get In Touch</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <input type="tel" placeholder="Mobile Number" required>
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
 
-    <!-- Right Side Company Info -->
-    <div class="contact-info">
-      <h2>Preface Digital Solutions</h2>
-      <p><strong>Mobile:</strong> +91 9876543210</p>
-      <p><strong>Email 1:</strong> info@example.com</p>
-      <p><strong>Email 2:</strong> support@example.com</p>
-      <p><strong>Service:</strong> Web Designer</p>
-    </div>
+<section class="pds-contact-wrapper">
+    <div class="pds-contact-container">
 
-  </div>
+        <!-- LEFT SIDE -->
+        <div class="pds-contact-left">
+            <h2 class="pds-company-name">Preface Digital Solutions</h2>
+            
+            <p class="pds-address">
+                123, Street Name,<br>
+                Janakpuri, New Delhi - 110058
+            </p>
+
+            <div class="pds-info">
+                <h4>Phone</h4>
+                <p>+91 9876543210</p>
+                <p>+91 9123456780</p>
+            </div>
+
+            <div class="pds-info">
+                <h4>Email</h4>
+                <p>info@yourcompany.com</p>
+                <p>support@yourcompany.com</p>
+            </div>
+
+            <div class="pds-info">
+                <h4>Website</h4>
+                <p><a href="#">www.yourwebsite.com</a></p>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="pds-contact-right">
+            <h2>Contact Us</h2>
+            <form class="pds-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Mobile Number" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+    </div>
 </section>
 
-<style>
-.contact-section {
-  padding: 50px 20px;
-  background: #f5f5f5;
-}
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-}
+<!-- form section End t-->
 
-/* Form Side */
-.contact-form {
-  flex: 1;
-  min-width: 300px;
-}
 
-.contact-form h2 {
-  margin-bottom: 20px;
-}
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
 
-.contact-form button {
-  padding: 12px 20px;
-  background: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
-.contact-form button:hover {
-  background: #0056b3;
-}
+<!-- map section start -->
 
-/* Info Side */
-.contact-info {
-  flex: 1;
-  min-width: 300px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
-}
+<section class="pds-map-section">
+    <iframe 
+        src="https://www.google.com/maps?q=Janakpuri,New+Delhi&output=embed" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+</section>
 
-.contact-info h2 {
-  margin-bottom: 15px;
-}
 
-.contact-info p {
-  margin: 10px 0;
-  font-size: 16px;
-}
-</style>
-<!-- Contact Section End -->
+<!-- map section End -->
+
 
 
 
 
 <!-- Footer section start -->
+
 <footer class="site-footer">
   <div class="container">
 
     <!-- Top Section -->
     <div class="row justify-content-between align-items-center mb-5">
       <div class="col-md-6">
-        <h1 class="footer-title">Preface</h1>
+
+        <h1 class="footer-title"></h1>
+
         <p class="footer-desc">
-          We provide all the creative, technical, and organizational skills
+     
         </p>
       </div>
     </div>
@@ -349,10 +294,13 @@
 </footer>
 <!-- Footer section end -->
 
+
 <!-- Scroll to top arrow  section start-->
 
 <button id="scrollTopBtn" class="scroll-top-btn">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <svg width="24" height="24"viewBox="0 0 24 24"
+     fill="none" stroke="white" stroke-width="3" 
+     stroke-linecap="round" stroke-linejoin="round">
         <line x1="12" y1="19" x2="12" y2="5"></line>
         <polyline points="5 12 12 5 19 12"></polyline>
     </svg>
@@ -394,11 +342,20 @@
 
     <script src="../assets/js/index.js"></script>
 
-    
     <script src="../assets/js/theme.js"></script>
 
   </body>
 
 
 </html>
+
+
+
+
+
+
+
+
+
+
 
