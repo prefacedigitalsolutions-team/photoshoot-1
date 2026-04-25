@@ -109,7 +109,7 @@
 @media (max-width: 480px) {
   .shine-banner {
     margin-top: 48px;
-    min-height: 65vh;
+    min-height: 73vh;
     height: auto;
   }
 
@@ -169,7 +169,7 @@
 
 @media (max-width: 768px) {
   .portfolio-section {
-    padding: 40px 15px;
+    padding: 40px 10px;
   }
 
   .portfolio-container {
@@ -184,14 +184,25 @@
 
 @media (max-width: 480px) {
   .portfolio-section {
-    padding: 0px 12px 70px 12px;
+    padding: 0px 15px 50px 20px;
+  }
+
+  .portfolio-container {
+    max-width: 100%;
+    text-align: center;
   }
 
   .portfolio-container p {
-    font-size: 16px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #555;
+    padding: 0;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: justify;
+    word-break: normal;
   }
 }
-
 /* Intro section End */
 
 

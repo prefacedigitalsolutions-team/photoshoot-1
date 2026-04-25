@@ -123,9 +123,15 @@
 <!-- banar sectiob start-->
 
 <section class="shine-banner">
-  <h1 class="banner-title">Foodphotography</h1>
+  <h1 class="banner-title">Food Photography</h1>
   <div class="shine-overlay"></div>
-  <img src="../img-1/food/food-banar-1.jpg" alt="banner">
+
+  <picture>
+    <source media="(max-width: 768px)" srcset="../../img-1/food/food-responsive-01.jpg">
+    <source media="(max-width: 480px)" srcset="../../img-1/food/food-responsive-01.jpg">
+
+    <img src="../img-1/food/food-banar-1.jpg" alt="banner">
+  </picture>
 </section>
 
 

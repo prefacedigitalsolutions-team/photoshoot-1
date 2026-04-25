@@ -1,28 +1,34 @@
-/* banner section start */
-
 .contact-banner {
     height: 98vh;
     width: 100%;
     position: relative;
     overflow: hidden;
-    background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216');
-    background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contact-banner h1 {
-    color: #fff;
-    font-size: 48px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    z-index: 2;
+/* IMAGE */
+.contact-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-/* COLORFUL SHINE EFFECT */
+/* TITLE */
+.contact-banner h1 {
+    position: absolute;
+    color: #ffffff;
+    font-size: 48px;
+    z-index: 2;
+    text-align: center;
+    padding: 0 20px;
+
+    left: 75%;
+    transform: translateX(-75%);
+}
+/* SHINE EFFECT */
 .contact-banner::before {
     content: "";
     position: absolute;
@@ -44,11 +50,42 @@
 }
 
 @keyframes contact-shine {
-    0% {
-        left: -80%;
+    0% { left: -80%; }
+    100% { left: 130%; }
+}
+
+
+
+@media (max-width: 1024px) {
+    .contact-banner h1 {
+        font-size: 42px;
     }
-    100% {
-        left: 130%;
+}
+
+@media (max-width: 768px) {
+    .contact-banner {
+        height: 70vh;
+    }
+
+    .contact-banner h1 {
+        font-size: 32px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-banner {
+        margin-top: 48px;
+        height: 55vh;
+    }
+
+    .contact-banner h1 {
+        font-size: 25px;
+        line-height: 1.3;
+
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 /* banar section End*/
