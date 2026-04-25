@@ -819,7 +819,7 @@ pointer-events:auto;
 .photo-bg .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8); 
+  background: rgba(0, 0, 0, 0.6); 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -858,80 +858,40 @@ pointer-events:auto;
 
 
 
-/* our client section start */
+/* heading section start */
 
-
-.clients-section{
+.heading-section{
   padding: 80px 20px;
   text-align: center;
-  background: #fff;
+  background: #02073b;
 }
 
-.clients-title{
-  font-size: 35px;
-  margin-bottom: 15px;
-  color: #545454;
+.heading-section h2{
+  font-size: 42px;
+  line-height: 1.4;
   font-weight: 600;
-}
-
-.clients-desc{
-  font-size: 22px;
-  color: #555;
-  max-width: 700px;
-  margin: 0 auto 40px;
-  line-height: 1.6;
-}
-
-/* SLIDER */
-.clients-slider{
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.clients-track{
-  display: flex;
-  gap: 60px;
-  width: max-content;
-  animation: scroll 20s linear infinite;
-}
-
-.clients-track img{
-  width: 160px;   /* logo size bada */
-  height: 80px;   /*  fixed height for clean alignment */
-  object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.8;
-}
-
-/* ANIMATION */
-@keyframes scroll{
-  from{transform: translateX(0)}
-  to{transform: translateX(-50%)}
+  color: #e8e8e8;
 }
 
 /* RESPONSIVE */
 @media(max-width:768px){
-  .clients-title{font-size:24px}
-  .clients-desc{font-size:14px}
-
-  .clients-track img{
-    width: 120px;
-    height: 60px;
+  .heading-section h2{
+    font-size: 30px;
   }
 }
 
 @media(max-width:480px){
-  .clients-track{
-    gap:30px;
+  .heading-section{
+    padding: 50px 15px;
   }
 
-  .clients-track img{
-    width: 90px;
-    height: 50px;
+  .heading-section h2{
+    font-size: 22px;
+    line-height: 1.5;
   }
 }
 
+/* heading section End */
 
 
 
