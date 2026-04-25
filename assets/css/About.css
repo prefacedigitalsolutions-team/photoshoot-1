@@ -1,31 +1,30 @@
 .split-section {
     display: flex;
     width: 100%;
-    height: 99vh;
+    height: 98vh; /* 105vh hata diya */
     overflow: hidden;
 }
 
 /* LEFT SIDE (IMAGE) */
 .right-image {
-    width: 50%;
+    width: 48%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    overflow: hidden;
     background: #000;
 }
 
-/* IMAGE FIX - NO CUT */
+/* IMAGE FIX - PERFECT FIT */
 .right-image img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
     display: block;
 }
 
 /* RIGHT SIDE (TEXT) */
 .left-content {
-    width: 50%;
+    width: 52%;
     background: #1e90ff;
     display: flex;
     align-items: center;
@@ -36,19 +35,18 @@
 /* TEXT */
 .text-box {
     text-align: left;
-    padding: 20px;
+    padding: 40px;
 }
 
 .text-box h1 {
-    font-size: 0px;
+    font-size: 0px;  
     margin-bottom: 0px;
 }
 
 .text-box p {
-    font-size: 45px;
-    padding: 80px 60px 80px 60px;
+    font-size: 45px;   
+    padding: 20px 40px;
     font-weight: 500;
-   
 }
 
 /* ANIMATION */
@@ -68,4 +66,62 @@
 @keyframes fadeRight {
     from { transform: translateX(60px); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
+}
+
+
+@media (max-width: 1024px) {
+    .split-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .right-image,
+    .left-content {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .text-box {
+        padding: 30px;
+    }
+
+    .text-box p {
+        font-size: 28px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .split-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .right-image,
+    .left-content {
+        width: 100%;
+        height: auto;
+        min-height: 50vh;
+    }
+
+    .text-box {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .text-box p {
+        font-size: 30px;
+        padding: 10px;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-box p {
+        font-size: 28px;
+    }
+
+    .text-box {
+        padding: 15px;
+    }
 }

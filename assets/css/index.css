@@ -6,7 +6,9 @@ body {
   line-height: 1.7;
   color: #666;
 }
-
+.banner-title {
+  font-family: "Poppins", sans-serif !important;
+}
 /* ALL PARAGRAPHS */
 p,
 li,
