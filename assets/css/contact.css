@@ -191,7 +191,7 @@
     background: #333;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 768px) {
     .pds-contact-left {
         border-right: none;

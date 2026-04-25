@@ -1,127 +1,72 @@
-.split-section {
-    display: flex;
-    width: 100%;
-    height: 98vh; /* 105vh hata diya */
-    overflow: hidden;
+.about-banner{
+  position:relative;
+  width:100%;
+  height:98vh;
+  overflow:hidden;
 }
 
-/* LEFT SIDE (IMAGE) */
-.right-image {
-    width: 48%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    background: #000;
+/* IMAGE */
+.about-banner img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 
-/* IMAGE FIX - PERFECT FIT */
-.right-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  
-    display: block;
+/* HEADING */
+.about-title{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  color:#fff;
+  font-size:48px;
+  font-weight:600;
+  letter-spacing:1px;
+  z-index:2;
+  text-align:center;
+  text-shadow:0 5px 20px rgba(0,0,0,0.5);
 }
 
-/* RIGHT SIDE (TEXT) */
-.left-content {
-    width: 52%;
-    background: #1e90ff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+/* SHINE EFFECT */
+.shine-overlay{
+  position:absolute;
+  top:0;
+  left:-75%;
+  width:40%;
+  height:100%;
+  background:linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.4) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  transform:skewX(-25deg);
+  animation:shineMove 5s ease-in-out infinite;
+  z-index:1;
 }
 
-/* TEXT */
-.text-box {
-    text-align: left;
-    padding: 40px;
+@keyframes shineMove{
+  0%{left:-75%;opacity:0}
+  10%{opacity:1}
+  50%{left:125%;opacity:1}
+  60%{opacity:0}
+  100%{left:125%;opacity:0}
 }
 
-.text-box h1 {
-    font-size: 0px;  
-    margin-bottom: 0px;
+/* RESPONSIVE */
+@media(max-width:768px){
+  .about-banner{height:70vh}
+  .about-title{font-size:30px;padding:0 15px}
+  .shine-overlay{width:50%}
 }
 
-.text-box p {
-    font-size: 45px;   
-    padding: 20px 40px;
-    font-weight: 500;
+@media(max-width:480px){
+    
+  .about-banner{
+     margin-top: 48px;
+    height:65vh
 }
-
-/* ANIMATION */
-.left-content {
-    animation: fadeRight 1s ease forwards;
-}
-
-.right-image {
-    animation: fadeLeft 1s ease forwards;
-}
-
-@keyframes fadeLeft {
-    from { transform: translateX(-60px); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes fadeRight {
-    from { transform: translateX(60px); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
-
-
-@media (max-width: 1024px) {
-    .split-section {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .right-image,
-    .left-content {
-        width: 100%;
-        height: 50vh;
-    }
-
-    .text-box {
-        padding: 30px;
-    }
-
-    .text-box p {
-        font-size: 28px;
-        padding: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .split-section {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .right-image,
-    .left-content {
-        width: 100%;
-        height: auto;
-        min-height: 50vh;
-    }
-
-    .text-box {
-        padding: 20px;
-        text-align: center;
-    }
-
-    .text-box p {
-        font-size: 30px;
-        padding: 10px;
-        line-height: 1.5;
-    }
-}
-
-@media (max-width: 480px) {
-    .text-box p {
-        font-size: 28px;
-    }
-
-    .text-box {
-        padding: 15px;
-    }
+  .about-title{font-size:22px}
+  .shine-overlay{width:60%}
 }
